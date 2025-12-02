@@ -19,7 +19,6 @@
       font-family:'Outfit',system-ui;
     }
 
-    /* --------- RESET Y BASICS ---------- */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -34,7 +33,6 @@
     }
     body { min-width: 0; }
 
-    /* Scrollbar styling */
     html::-webkit-scrollbar, body::-webkit-scrollbar {
       width: 14px;
       background: #000;
@@ -157,12 +155,23 @@
       #slide-img{height:220px;}
     }
 
+    /* Mostrar solo el título debajo del slider en móvil */
+    .hero-content-mobile { display: none; }
+    @media (max-width:600px) {
+      .hero-overlay { display: none !important; }
+      .hero-content-mobile { 
+        display: block; 
+        width: 100vw;
+        text-align: center; 
+        padding: 20px 0 0 0; 
+      }
+    }
+
     .tiktok-video-section {
       margin:60px 0 0 0;
       text-align:center;
     }
 
-    /* --- REDES GALLERY (100vw, sin scroll!) --- */
     .redes-gallery-wrapper {
       width: 100vw;
       position: relative;
@@ -332,7 +341,7 @@
   </style>
 </head>
 <body>
-  <!-- HERO SLIDER + TEXTO SUPERPUESTO -->
+  <!-- HERO SLIDER + TEXTO SUPERPUESTO EN PC -->
   <div id="slider-hero-wrapper">
     <div id="slider">
       <img id="slide-img" src="1.png" alt="Slider portada" style="opacity:1;" />
@@ -351,6 +360,20 @@
       </div>
     </div>
   </div>
+
+  <!-- HERO CONTENT SOLO PARA MÓVIL DEBAJO DEL SLIDER -->
+  <div class="hero-content-mobile">
+    <div class="hero-title">
+      <span>ARTES</span>
+      <span>MARCIALES</span>
+    </div>
+    <div class="hero-buttons">
+      <div class="aprende">APRENDE</div>
+      <div class="encasa">EN CASA</div>
+    </div>
+    <p class="hero-lead">técnicas • movilidad • energía • mindset</p>
+  </div>
+
   <script>
     const slides = [
       '1.png',
@@ -405,13 +428,11 @@
       </div>
     </section>
 
-    <!-- VIDEO SOLO (no botón) + GALERÍA DE 3 FOTOS COMO BOTÓN, 100vw SIN BARRAS NI RECORTES -->
     <section class="tiktok-video-section">
       <h2 style="color:#64AF2E; margin-bottom:20px;">Seguime en redes</h2>
       <video src="video-tiktok-5s.mp4" autoplay loop muted playsinline 
              style="width:260px; height:460px; object-fit:cover; border-radius:14px; border:3px solid #64AF2E; cursor:pointer; margin-bottom:20px;"></video>
 
-      <!-- FONDO OUTSIDE CON WRAPPER -->
       <div class="redes-gallery-wrapper">
         <div class="redes-gallery">
           <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" title="TikTok">
@@ -427,7 +448,6 @@
       </div>
     </section>
 
-    <!-- FEATURES: 4 recuadros (2 arriba, 2 abajo) -->
     <section class="features">
       <div class="feature">
         <h4>Movilidad fluida</h4>
@@ -447,13 +467,11 @@
       </div>
     </section>
 
-    <!-- GALERÍA -->
     <section class="photo-block">
       <img src="https://images.unsplash.com/photo-1552074284-5a88f6e8804b?auto=format&fit=crop&w=900&q=80" alt="foto 1" />
       <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=900&q=80" alt="foto 2" />
     </section>
 
-    <!-- NUEVO BLOQUE DE TEXTO EXPLICATIVO BAJO GALERÍA -->
     <section class="gallery-explanatory">
       <h3>Entrená sin límites desde casa</h3>
       <p>
@@ -464,7 +482,6 @@
       </p>
     </section>
 
-    <!-- BOTÓN WHATSAPP FINAL, MISMO ANCHO -->
     <div class="btn-whatsapp-wrapper">
       <a class="btn-green bottom" href="https://wa.me/5493416608336?text=Hola%2C+quiero+empezar+ahora+desde+artesmarciales.training" target="_blank" rel="noopener">
         Quiero empezar ahora
