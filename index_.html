@@ -338,18 +338,51 @@
       min-width: 100vw !important;
       overflow-x: hidden !important;
     }
-  </style>
-	
-	
-	
-	<style>
-  .titulo-beneficio {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #64AF2E;
+    .titulo-beneficio {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #64AF2E;
+    }
+	  
+	  
+	  
+	  
+	  .metodo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 32px 0 38px 0;
+  align-items: center;
+}
+.metodo-item {
+  background: var(--glass);
+  border: 1.5px solid rgba(100,175,46,0.22);
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(100,175,46,0.07);
+  padding: 18px 22px;
+  color: var(--white);
+  font-size: 1.12em;
+  font-family: inherit;
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.metodo-item:hover {
+  background: rgba(100,175,46,0.12);
+  box-shadow: 0 8px 32px rgba(100,175,46,0.17);
+}
+@media (max-width:600px){
+  .metodo-item {
+    max-width: 98vw;
+    font-size: 1em;
+    padding: 14px 10px;
   }
-</style>
+}
+  </style>
 	
 </head>
 <body>
@@ -390,7 +423,6 @@
     const slides = [
       '1.png',
       '2.png',
-      
     ];
     let idx = 0;
     const slideImg = document.getElementById('slide-img');
@@ -408,94 +440,110 @@
   <div class="container">
     <header>
       <div class="brand">
-       
         <div>
           <h1 style="color:#64AF2E; margin-bottom:18px;" align="center">Recuperá la <span style="color:#fff;">MOVILIDAD</span>, la <span style="color:#fff;">ENERGÍA</span> y la <span style="color:#fff;">CONFIANZA</span> en tu cuerpo con mi MÉTODO DE ARTES MARCIALES pensado <span style="color:#fff;">PARA ADULTOS REALES</span>.<br><br>
-
-
 SIN PELEAS, SIN RIESGOS: SOLO MOVIMIENTO INTELIGENTE, RESPIRACIÓN Y TÉCNICA.<br></h1>
-
-<h1 style="color:#fff; margin-bottom:18px;" align="center">ENTRENÁ 2 VECES POR SEMANA Y TRANSFORMÁ TU CUERPO DE MANERA REAL Y SOSTENIBLE.</h1>
-         
+          <h1 style="color:#fff; margin-bottom:18px;" align="center">ENTRENÁ 2 VECES POR SEMANA Y TRANSFORMÁ TU CUERPO DE MANERA REAL Y SOSTENIBLE.</h1>
         </div>
-		  
       </div>
-		
     </header>
-	  <!-- BOTÓN WHATSAPP EN WRAPPER MÁS ANCHO -->
-      <div class="btn-whatsapp-wrapper">
-        <a class="btn-green" href="https://wa.me/5493416608336?text=Hola%2C+quiero+empezar+ahora+desde+artesmarciales.training" target="_blank" rel="noopener">
-          Quiero empezar ahora
-        </a>
-      </div>
+    <!-- BOTÓN WHATSAPP EN WRAPPER MÁS ANCHO -->
+    <div class="btn-whatsapp-wrapper">
+      <a class="btn-green" href="https://wa.me/5493416608336?text=Hola%2C+quiero+empezar+ahora+desde+artesmarciales.training" target="_blank" rel="noopener">
+        Quiero empezar ahora
+      </a>
+    </div>
+
+    <!-- FOTO DE PRESENTACIÓN (quién soy) -->
+   <div style="display:flex;justify-content:center;margin:38px 0 18px 0;">
+  <img 
+    src="tu-foto.jpg" 
+    alt="Fabricio - Instructor de Artes Marciales" 
+    style="width:50vw;max-width:100vw;height:auto;object-fit:cover;box-shadow:none;border:none;border-radius:0;background:#222;"
+    loading="lazy"
+  >
+</div>
 
     <section style="margin:60px 0; text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
       <h2 style="color:#64AF2E; margin-bottom:18px;">Por qué creé este método</h2>
       <p style="font-size:18px; color:#d0d0d0; line-height:1.6;">
         Soy Fabricio, cinturón negro de Taekwondo con más de 35 años de práctica continua en diferentes estilos de artes marciales y también stuntman de cine (doble de riesgo).<br><br>
-
-
-
 Pero además de todo eso, pasé más de 20 años como editor de video, sentado frente a la computadora durante horas interminables, sintiendo cómo mi propio cuerpo se ponía cada vez más rígido. Dolores, poca movilidad, mala postura, agotamiento… lo viví en carne propia.
 <br>
 <br>
-
 Justamente por eso creé este método:
 porque conozco los dos mundos —el del cuerpo entrenado y el del cuerpo sedentario— y sé exactamente cómo volver a despertarlo, incluso después de años de rigidez.
 <br><br>
-
-
 Este sistema está pensado para personas mayores de 30 años, sedentarias o con poca movilidad, que sienten que el cuerpo se les fue “apagando” con la rutina, el estrés y los años.
 Y que aun así quieren recuperar agilidad, energía, postura, flexibilidad y, sobre todo… confianza en su propio cuerpo.
 <br><br>
-
-
 Mi misión es simple:
 enseñarte a mover tu cuerpo como nunca te enseñaron.
       </p><br>
 <br>
-<br>
-<br>
 
-      
-      <h2 style="color:#64AF2E; margin-bottom:18px;">Lo que este método va a despertar en vos</h2>
 		
+		<!-- DIVISOR VIDEO: entre "Por qué creé este método" y "Lo que este método va a despertar en vos" -->
+<div style="display:flex;justify-content:center;margin:40px 0;">
+  <video 
+    src="divisor-video.mp4"
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    style="
+      display: block;
+      width: 400px;
+      max-width: 95vw;
+      height: 250px;
+      max-height: 65vw;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 32px rgba(100,175,46,0.08);
+      background: #111;
+    "
+  ></video>
+</div>
+		<br>
+<br>
+<br>
+<br>
+      
+		
+		<h2 style="color:#64AF2E; margin-bottom:18px;">Lo que este método va a despertar en vos</h2>
+
 <p style="font-size:18px; color:#d0d0d0; line-height:1.6; margin-top:16px;">
-Es un método simple, progresivo y accesible que está basado en las artes marciales tradicionales y que te enseña a:
-<br>
-<br>
+  Es un método simple, progresivo y accesible que está basado en las artes marciales tradicionales y que te enseña a:
+</p>
 
-- Mover tu cuerpo con libertad, sin dolor ni rigidez.
-<br>
-<br>
+<div class="metodo-lista">
+  <div class="metodo-item">
+    Mover tu cuerpo con libertad, sin dolor ni rigidez.
+  </div>
+  <div class="metodo-item">
+    Respirar mejor, regular tu energía y sentirte más liviano.
+  </div>
+  <div class="metodo-item">
+    Reconectar con tu fuerza interna, incluso si hoy te sentís lento, tenso o sin movilidad.
+  </div>
+  <div class="metodo-item">
+    Mejorar tu postura y recuperar movilidad real en cadera, columna y hombros.
+  </div>
+  <div class="metodo-item">
+    Volver a sentir que tu cuerpo te acompaña en vez de frenarte.
+  </div>
+</div>
 
-- Respirar mejor, regular tu energía y sentirte más liviano.
-<br>
-<br>
-
-- Reconectar con tu fuerza interna, incluso si hoy te sentís lento, tenso o sin movilidad.
-<br>
-<br>
-
-- Mejorar tu postura y recuperar movilidad real en cadera, columna y hombros.
-<br>
-<br>
-
-- Volver a sentir que tu cuerpo te acompaña en vez de frenarte.
-<br>
-<br><br>
-
-
-Además, aprendemos técnicas marciales auténticas —golpes, bloqueos y defensas— pero enfocadas en desarrollar coordinación, precisión, fuerza y agilidad, tanto física como mental.<br><br>
-
-
-Sin contacto, sin pelear, sin riesgos: solo técnica, control y progreso real.
-<br>
-<br>
-
-Acá no entrenamos para competir.<br>
-
-Entrenamos para vivir mejor, con la filosofía marcial como guía: disciplina, respeto, constancia, progresión y claridad mental.<br>
+<p style="font-size:18px; color:#d0d0d0; line-height:1.6; margin-top:28px;">
+  Además, aprendemos técnicas marciales auténticas —golpes, bloqueos y defensas— pero enfocadas en desarrollar coordinación, precisión, fuerza y agilidad, tanto física como mental.<br><br>
+  Sin contacto, sin pelear, sin riesgos: solo técnica, control y progreso real.<br><br>
+  Acá no entrenamos para competir.<br>
+  Entrenamos para vivir mejor, con la filosofía marcial como guía: disciplina, respeto, constancia, progresión y claridad mental.<br>
+</p>
+		
+		
+		
+		<br>
 <br>
 
       </p>
@@ -511,7 +559,6 @@ Entrenamos para vivir mejor, con la filosofía marcial como guía: disciplina, r
       <h2 style="color:#64AF2E; margin-bottom:20px;">Seguime en redes</h2>
       <video src="video-tiktok-5s.mp4" autoplay loop muted playsinline 
              style="width:260px; height:460px; object-fit:cover; border-radius:14px; border:3px solid #64AF2E; cursor:pointer; margin-bottom:20px;"></video>
-
       <div class="redes-gallery-wrapper">
         <div class="redes-gallery">
           <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" title="TikTok">
@@ -527,16 +574,13 @@ Entrenamos para vivir mejor, con la filosofía marcial como guía: disciplina, r
       </div>
     </section>
 
-	  <h3>Entrená sin límites desde casa</h3><br>
+    <h3>Entrená sin límites desde casa</h3><br>
 <br>
-	  
-    <section class="features">
-		
 
+    <section class="features">
       <div class="feature">
         <h4>Movilidad fluida</h4>
         <p>
-
 Mové tu cuerpo como fue diseñado: libre, ágil y sin rigidez.
 Usamos técnicas marciales adaptadas para recuperar movilidad y coordinación real.</p>
       </div>
@@ -564,10 +608,7 @@ Te enseño un sistema que construye constancia real, sin exigencias imposibles.<
 
     <section class="gallery-explanatory">
       <h3>Beneficios reales del método</h3>
-      
-		
-		
-		<p>
+      <p>
   <strong class="titulo-beneficio">Movilidad y flexibilidad natural</strong><br>
   Los movimientos marciales desbloquean articulaciones y activan músculos olvidados. Sin darte cuenta, recuperás rango de movimiento y te sentís más “liviano”.
   <br><br>
@@ -596,19 +637,25 @@ Te enseño un sistema que construye constancia real, sin exigencias imposibles.<
   Cuando el cuerpo responde mejor, la mente también. Recuperás seguridad, energía y ganas de moverte.
   <br><br>
 </p>
-		
-		
-		
     </section>
-	  
-	  
-	  
-	  <section class="gallery-explanatory">
+	
+	
+	
+	<!-- Imagen ilustrativa antes de "No hace falta ser experto ni saber nada previo." -->
+<div style="display:flex;justify-content:center;margin:48px 0 28px 0;">
+  <img 
+    src="mi-otra-foto.jpg" 
+    alt="Entrenamiento Fabricio"
+    style="width:50vw;max-width:100vw;height:auto;object-fit:cover;box-shadow:none;border:none;border-radius:0;background:#222;"
+    loading="lazy"
+  >
+</div>
+	
+	
+
+    <section class="gallery-explanatory">
       <h3>No hace falta ser experto ni saber nada previo.</h3>
-      
-		
-		
-		<p>
+      <p>
   Solo tenés que entrenar, disfrutar el proceso… <br>
 y dejar que los beneficios lleguen solos.
 <br>
@@ -629,24 +676,16 @@ y descubrí lo que tu cuerpo todavía es capaz de hacer.<br>
 <br>
 </strong><br>
 
-
 👉 Sumate hoy y empezá tu cambio.<br><br>
-  
-
- 
 </p>
-		
-		
-		
     </section>
-	  
 
     <div class="btn-whatsapp-wrapper">
       <a class="btn-green bottom" href="https://wa.me/5493416608336?text=Hola%2C+quiero+empezar+ahora+desde+artesmarciales.training" target="_blank" rel="noopener">
         Quiero empezar ahora
       </a>
     </div>
-    
+
     <footer>
       © Fabricio — Entrenamiento de Artes Marciales
     </footer>
